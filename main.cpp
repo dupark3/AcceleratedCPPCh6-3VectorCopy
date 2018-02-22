@@ -6,6 +6,9 @@
 int main() {
     std::vector<int> u(10, 100);
     std::vector<int> v;
+
+    // Advantages using inserter: can insert anywhere within the output vector
+    // Disadvantages: slower appending
     copy(u.begin(), u.end(), inserter(v, v.begin()));
 
     // u contains 10 elements with value 100
